@@ -14,14 +14,12 @@
     <file>/Content/Scripts/bootstrap.min.js</file>
     <file>/Content/Scripts/star-rating.js</file>
     <file>/Content/Scripts/underscore.js</file>
-    <file>/Content/Scripts/DevOrgPlugins/every-page.js</file>
     <file>/Content/Scripts/FrontEnd/wow.min.js</file>
     <file>/Content/Scripts/FrontEnd/jquery.sticky.js</file>
     <file>/Content/Scripts/FrontEnd/jquery.stellar.js</file>
     <file>/Content/Scripts/FrontEnd/base-theme.js</file>
     <file>/Content/Scripts/FrontEnd/jquery.isotope.min.js</file>
     <file>/Content/Scripts/FrontEnd/owl.carousel.min.js</file>
-    <file>/Content/Scripts/FrontEnd/main.js</file>
     <file>/Content/Scripts/FrontEnd/jquery.number.js</file>
     
     <file>/Content/Scripts/DevOrgPlugins/developers-organism.component.js</file>
