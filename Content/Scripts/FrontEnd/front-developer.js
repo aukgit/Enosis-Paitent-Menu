@@ -20,9 +20,10 @@
 /// <reference path="jquery.isotope.min.js" />
 /// <reference path="front-developer.js" />
 /// <reference path="wow.min.js" />
+/// <reference path="../DevOrgPlugins/faster-jQuery.js" />
 
 $.frontEndApp = {
-    transactionStatushdie : function () {
+    transactionStatushdie: function () {
         var $transactionStatus = $.queryAll(".transaction-status");
         if ($transactionStatus.length > 0) {
             $transactionStatus.delay(1500).fadeOut(2500);
@@ -36,6 +37,14 @@ $.frontEndApp = {
             mobile: false        // trigger animations on mobile devices (true is default)
         });
         wow.init();
+
+        var $dropdowns = $.queryAll(".dropdown");
+        if ($dropdowns.length > 0) {
+            $dropdowns.hover(
+                function () { $(this).addClass('open') }, // in
+                function () { $(this).removeClass('open') } // out
+            );
+        }
 
         var $frontPageRatings = $.queryAll(".rating-5-front");
         if ($frontPageRatings.length > 0) {
