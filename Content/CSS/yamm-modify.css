@@ -38,6 +38,10 @@
     height: 95px;
     height: 9.5rem;
   }
+  .enosis-paitent-menu ul.sub-menu {
+    background: #f7f8fb;
+    border-left: 1px solid #c1cadb;
+  }
   .enosis-paitent-menu > li {
     width: 118.609px;
     width: 11.8rem;

@@ -38,8 +38,6 @@
 
             &:hover {
                 color: @almost-white-color;
-
-                
             }
         }
     }
@@ -58,42 +56,47 @@
 
     .enosis-paitent-menu {
         .height(95px);
-    }
 
-    .enosis-paitent-menu > li {
-        .width(@menu-top-item-tablet-width);
-
-        ul.dropdown-menu {
-            .min-width(@menu-top-item-tablet-width);
-
-            &:hover {
-                .transition(2s; 'fade-in');
-            }
+        ul.sub-menu {
+            background: #f7f8fb;
+            border-left: 1px solid #c1cadb;
         }
 
-        & > a {
-            text-align: center;
-            padding: 0;
-            border-left: 2px solid #E9E9EA;
-            transition: .2s;
-            height: 100%;
+        & > li {
+            .width(@menu-top-item-tablet-width);
 
-            & > .icon-wrapper {
-                display: inline-block;
+            ul.dropdown-menu {
+                .min-width(@menu-top-item-tablet-width);
+
+                &:hover {
+                    .transition(2s; 'fade-in');
+                }
             }
 
-            & > h1 {
-                display: block;
-                font-weight: 600;
-                color: rgb(107, 107, 107);
-                max-width: 100% !important;
+            & > a {
+                text-align: center;
                 padding: 0;
-                margin: 0;
-                line-height: 20px;
-                background-repeat: no-repeat;
-                background-position: center 32%;
-                position: relative;
-                -webkit-transition: .2s;
+                border-left: 2px solid #E9E9EA;
+                transition: .2s;
+                height: 100%;
+
+                & > .icon-wrapper {
+                    display: inline-block;
+                }
+
+                & > h1 {
+                    display: block;
+                    font-weight: 600;
+                    color: rgb(107, 107, 107);
+                    max-width: 100% !important;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 20px;
+                    background-repeat: no-repeat;
+                    background-position: center 32%;
+                    position: relative;
+                    -webkit-transition: .2s;
+                }
             }
         }
     }
