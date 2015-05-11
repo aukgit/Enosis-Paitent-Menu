@@ -16,86 +16,16 @@
 $(function () {
 
 
-    var selectForYoutubeVideoOnDetailsPage = "body.app-details-page:first-child .youtube-video:first-child";
-    var $youtubeVideoContainer = $.queryAll(selectForYoutubeVideoOnDetailsPage);
-    if ($youtubeVideoContainer.length === 1) {
-        $youtubeVideoContainer.find(".playable-btn:first-child").click(function () {
-            var $iframe = $youtubeVideoContainer.find("iframe:first-child");
-            var $this = $(this);
-            if ($iframe.length === 1) {
-                $iframe[0].src += "?rel=0&controls=1&autoplay=1";
-                $this.hide("slow");
-                $this.unbind("click");//or some other way to make sure that this only happens once
-            }
-
-        });
-    }
-
-
-    $.frontEndAppDetailsPage = {
-        $showMoreBtnContainer: $.queryAll(".show-more-btns-container"),
-        $showMoreBtns: $.queryAll(".see-more-btn"),
-        $showLessBtns: $.queryAll(".less-btn"),
-        $moreExcert: $.queryAll(".more"),
+    $.frontEndApp = {
+       
         execute: function () {
-            $.queryAll("div.app-suggested-list-items-mobile:first-child,div.featured-apps-list-items").owlCarousel({
-                navigation: true,
-                navigationText: [
-                  "<i class='fa fa-chevron-circle-left'></i>",
-                  "<i class='fa fa-chevron-circle-right'></i>"
-                ],
-                items: 1, //10 items above 1000px browser width
-                //itemsDesktop: [1152, 6], //5 items between 1000px and 901px
-                //itemsDesktopSmall: [900, 4], // betweem 900px and 601px
-                //itemsTablet: [600, 3], //2 items between 600 and 0
-                //itemsMobile: [450, 2],
-                itemsCustom: [370, 1]
+            var wow = new WOW({
+                boxClass: 'wow',      // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset: 100,          // distance to the element when triggering the animation (default is 0)
+                mobile: false        // trigger animations on mobile devices (true is default)
             });
-
-
-            var $frontPageGallyery = $.queryAll(".tp-banner");
-            if ($frontPageGallyery.length > 0) {
-                $frontPageGallyery.show().revolution({
-                    dottedOverlay: "none",
-                    delay: 5000,
-                    startwidth: 960,
-                    startheight: 320,
-                    hideThumbs: 10,
-                    fullWidth: "off",
-                    navigationType: "bullet",
-                    navigationStyle: "preview2",
-                    forceFullWidth: "off"
-                });
-            }
-
-            var $suggestionCarosel = $.queryAll(".owl-list");
-            if ($suggestionCarosel.length > 0) {
-                $suggestionCarosel.owlCarousel({
-                    navigation: true,
-                    navigationText: [
-                      "<i class='fa fa-chevron-circle-left'></i>",
-                      "<i class='fa fa-chevron-circle-right'></i>"
-                    ],
-                    items: 7, //10 items above 1000px browser width
-                    itemsDesktop: [1152, 6], //5 items between 1000px and 901px
-                    itemsDesktopSmall: [966, 5], // betweem 900px and 601px
-                    itemsTabletSmall: [730, 4],
-                    itemsTablet: [600, 3], //2 items between 600 and 0
-                    //itemsCustom: [[0, 2], [435, 3], [450, 2], [600, 3], [730, 4], [900, 5],  [950, 6]], // [[740, 6], [1000, 8], [1200, 10], [1600, 16]]
-                    itemsMobile: [450, 2]
-                    //itemsScaleUp: false
-
-                });
-            }
-            //$(".app-suggested-list").owlCarousel({
-            //    navigation: true,
-            //    navigationText: [
-            //      "<i class='fa fa-chevron-circle-left'></i>",
-            //      "<i class='fa fa-chevron-circle-right'></i>"
-            //    ],
-            //    items:1
-
-            //});
+            wow.init();
 
             var $frontPageRatings = $.queryAll(".rating-5-front");
             if ($frontPageRatings.length > 0) {
@@ -138,92 +68,71 @@ $(function () {
                     }
                 });
             }
-            var $appsPreview = $.queryAll("#apps-preview");
-            if ($appsPreview.length > 0) {
-                $appsPreview.owlCarousel({
-                    slideSpeed: 300,
-                    paginationSpeed: 400,
-                    singleItem: true,
-                    items: 1,
-                    itemsDesktop: false,
-                    itemsDesktopSmall: false,
-                    itemsTablet: false,
-                    itemsMobile: false,
-                    stopOnHover: true,
-                    navigation: true, // Show next and prev buttons
-                    pagination: false,
-                    autoHeight: true,
-                    navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-                });
-            }
+            
 
-            if (this.$moreExcert.length > 0) {
-                this.$moreExcert.hide();
-            }
+            ////filtering through isotop
+            //var $isotopContainer = $("ul.search-page-apps-list:first");
+            //if ($isotopContainer.length > 0) {
+            //    var $filterIsotopItems = $.queryAll('.filter li a');
+            //    if ($filterIsotopItems.length > 0) {
+            //        $filterIsotopItems.click(function () {
+            //            $('.filter li a').removeClass('active');
+            //            $(this).addClass('active');
+            //            var selector = $(this).attr('data-filter');
 
-            //filtering through isotop
-            var $isotopContainer = $("ul.search-page-apps-list:first");
-            if ($isotopContainer.length > 0) {
-                var $filterIsotopItems = $.queryAll('.filter li a');
-                if ($filterIsotopItems.length > 0) {
-                    $filterIsotopItems.click(function () {
-                        $('.filter li a').removeClass('active');
-                        $(this).addClass('active');
-                        var selector = $(this).attr('data-filter');
+            //            $isotopContainer.isotope({
+            //                filter: selector
+            //            });
+            //            return false;
+            //        });
+            //    }
+            //}
+            //var $numberElement = $.queryAll(".app-viewed-numbers:first-child");
+            //if ($numberElement.length > 0) {
+            //    $numberElement.number(true);
+            //}
 
-                        $isotopContainer.isotope({
-                            filter: selector
-                        });
-                        return false;
-                    });
-                }
-            }
-            var $numberElement = $.queryAll(".app-viewed-numbers:first-child");
-            if ($numberElement.length > 0) {
-                $numberElement.number(true);
-            }
+            //this.$showMoreBtns.click(function () {
+            //    var $this = $(this);
+            //    var moreReference = $this.attr("data-ref");
+            //    var dataId = $this.attr("data-id");
+            //    var dataRefSelector;
+            //    var dataIdSelector = _.isUndefined(dataId) === false ? "[data-id='" + dataId + "']" : "";
+            //    if (_.isUndefined(moreReference) === false) {
+            //        dataRefSelector = "[data-ref='" + moreReference + "']" + dataIdSelector + ":first";
 
-            this.$showMoreBtns.click(function () {
-                var $this = $(this);
-                var moreReference = $this.attr("data-ref");
-                var dataId = $this.attr("data-id");
-                var dataRefSelector;
-                var dataIdSelector = _.isUndefined(dataId) === false ? "[data-id='" + dataId + "']" : "";
-                if (_.isUndefined(moreReference) === false) {
-                    dataRefSelector = "[data-ref='" + moreReference + "']" + dataIdSelector + ":first";
+            //        var $specificMoreExcertFound = $.frontEndAppDetailsPage.$moreExcert.filter(dataRefSelector);
+            //        if ($specificMoreExcertFound.length > 0) {
+            //            $specificMoreExcertFound.show("slow");
+            //            $specificMoreExcertFound.css("display", "inline");
+            //        }
+            //        var $moreBtnContainer = $.frontEndAppDetailsPage.$showMoreBtnContainer.filter(dataRefSelector);
+            //        if ($moreBtnContainer.length > 0) {
+            //            $moreBtnContainer.hide("slow");
+            //        }
+            //    }
+            //});
 
-                    var $specificMoreExcertFound = $.frontEndAppDetailsPage.$moreExcert.filter(dataRefSelector);
-                    if ($specificMoreExcertFound.length > 0) {
-                        $specificMoreExcertFound.show("slow");
-                        $specificMoreExcertFound.css("display", "inline");
-                    }
-                    var $moreBtnContainer = $.frontEndAppDetailsPage.$showMoreBtnContainer.filter(dataRefSelector);
-                    if ($moreBtnContainer.length > 0) {
-                        $moreBtnContainer.hide("slow");
-                    }
-                }
-            });
+            //this.$showLessBtns.click(function () {
+            //    var $this = $(this);
+            //    var moreReference = $this.attr("data-ref");
+            //    var dataId = $this.attr("data-id");
+            //    var dataRefSelector;
+            //    var dataIdSelector = _.isUndefined(dataId) === false ? "[data-id='" + dataId + "']" : "";
+            //    if (_.isUndefined(moreReference) === false) {
+            //        dataRefSelector = "[data-ref='" + moreReference + "']" + dataIdSelector + ":first";
 
-            this.$showLessBtns.click(function () {
-                var $this = $(this);
-                var moreReference = $this.attr("data-ref");
-                var dataId = $this.attr("data-id");
-                var dataRefSelector;
-                var dataIdSelector = _.isUndefined(dataId) === false ? "[data-id='" + dataId + "']" : "";
-                if (_.isUndefined(moreReference) === false) {
-                    dataRefSelector = "[data-ref='" + moreReference + "']" + dataIdSelector + ":first";
-
-                    var $specificMoreExcertFound = $.frontEndAppDetailsPage.$moreExcert.filter(dataRefSelector);
-                    if ($specificMoreExcertFound.length > 0) {
-                        $specificMoreExcertFound.hide("slow");
-                    }
-                    var $moreBtnContainer = $.frontEndAppDetailsPage.$showMoreBtnContainer.filter(dataRefSelector);
-                    if ($moreBtnContainer.length > 0) {
-                        $moreBtnContainer.show("slow");
-                    }
-                }
-            });
+            //        var $specificMoreExcertFound = $.frontEndAppDetailsPage.$moreExcert.filter(dataRefSelector);
+            //        if ($specificMoreExcertFound.length > 0) {
+            //            $specificMoreExcertFound.hide("slow");
+            //        }
+            //        var $moreBtnContainer = $.frontEndAppDetailsPage.$showMoreBtnContainer.filter(dataRefSelector);
+            //        if ($moreBtnContainer.length > 0) {
+            //            $moreBtnContainer.show("slow");
+            //        }
+            //    }
+            //});
         }
     };
-    $.frontEndAppDetailsPage.execute();
+    $.frontEndApp.execute();
 });
