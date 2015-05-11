@@ -5010,11 +5010,28 @@ $.frontEndApp = {
         });
         wow.init();
 
-        var $dropdowns = $.queryAll(".dropdown");
-        if ($dropdowns.length > 0) {
-            $dropdowns.hover(
-                function () { $(this).addClass('open') }, // in
-                function () { $(this).removeClass('open') } // out
+        var $allDropdowns = $.queryAll("ul.enosis-paitent-menu>.dropdown");
+        if ($allDropdowns.length > 0) {
+            $allDropdowns.hover(
+                function () {
+                    // in
+                    var $singleDropDown = $(this);
+                    $singleDropDown.addClass('open');
+                    var $iconWrappers = $singleDropDown.find(".icon-wrapper");
+                    if ($iconWrappers.length > 0) {
+                        $iconWrappers.addClass("animated pulse");
+                    }
+                },
+                function () {
+                    // out
+                    $(this).removeClass('open');
+                    var $singleDropDown = $(this);
+                    $singleDropDown.removeClass('open');
+                    var $iconWrappers = $singleDropDown.find(".icon-wrapper");
+                    if ($iconWrappers.length > 0) {
+                        $iconWrappers.removeClass("animated pulse");
+                    }
+                }
             );
         }
 

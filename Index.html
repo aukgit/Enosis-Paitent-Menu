@@ -3,7 +3,6 @@
 <head>
     <title>Sample Page</title>
     <link href="/Content/css/bootstrap.css" rel="stylesheet" />
-    <link href="/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="/Content/css/less-imports.css" rel="stylesheet" />
     <link href="/Content/css/animate.min.css" rel="stylesheet" />
     <link href="/Content/css/font-awesome.min.css" rel="stylesheet" />
@@ -33,20 +32,29 @@
 </head>
 <body>
     <!-- Fixed navbar -->
-   
-    <div class="navbar yamm navbar-default navbar-fixed-top">
+
+    <div class="navbar yamm  navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Yamm Megamenu</a>
+                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="logo-wrapper navbar-brand">
+                    <img class="logo" src="/Images/logo.png" alt="Website logo" />
+                    <h1 class="seo-hide">Website Name</h1>
+                </a>
             </div>
             <div id="navbar-collapse-1" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav enosis-paitent-menu">
                     <!-- Classic list -->
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                            List
+                            <img src="/Images/bar.jpg" alt="" class="icon-bar" />
+                            <h1>Accordian</h1>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu animated fadeIn">
                             <li>
                                 <!-- Content container to add padding -->
                                 <div class="yamm-content">
@@ -105,8 +113,13 @@
                     </li>
                     <!-- Accordion demo -->
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Accordion<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            <div class="icon-wrapper">
+                                <img src="/Images/bar.jpg" alt="" class="icon-bar " />
+                            </div>
+                            <h1>Accordian</h1>
+                        </a>
+                        <ul class="dropdown-menu  animated fadeIn">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
@@ -143,8 +156,11 @@
                     </li>
                     <!-- Classic dropdown -->
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Classic<b class="caret"></b></a>
-                        <ul role="menu" class="dropdown-menu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            <img src="/Images/bar.jpg" alt="" class="icon-bar" />
+                            <h1>Classic</h1>
+                        </a>
+                        <ul role="menu" class="dropdown-menu  animated fadeIn">
                             <li><a tabindex="-1" href="#"> Action </a></li>
                             <li><a tabindex="-1" href="#"> Another action </a></li>
                             <li><a tabindex="-1" href="#"> Something else here </a></li>
@@ -154,8 +170,11 @@
                     </li>
                     <!-- Pictures -->
                     <li class="dropdown yamm-fw">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pictures<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            <img src="/Images/bar.jpg" alt="" class="icon-bar" />
+                            <h1>Pictures</h1>
+                        </a>
+                        <ul class="dropdown-menu  animated fadeIn">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">

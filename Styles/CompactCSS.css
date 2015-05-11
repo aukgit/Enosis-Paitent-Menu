@@ -8729,6 +8729,17 @@ label.control-label {
 .relative-position {
   position: relative;
 }
+.logo-wrapper {
+  display: block;
+  width: 30%;
+}
+.logo {
+  height: 77px;
+  height: 7.7rem;
+  width: 114px;
+  width: 11.4rem;
+  padding: 7px 10px 0 0;
+}
 /*# sourceMappingURL=front-developer.css.map */
 footer {
   padding: 0;
