@@ -28,10 +28,6 @@
 .yamm li > a:hover {
   color: #bdbdbd;
 }
-.yamm li > a:hover > .icon-wrapper {
-  padding: 8px 0px 0px 0px;
-  padding: 0.8rem 0 0 0;
-}
 @media (max-width: 768px) {
   .navbar-toggle {
     padding: 41px 10px;
