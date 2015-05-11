@@ -6,9 +6,13 @@
 .yamm button.navbar-toggle .icon-bar {
   background-color: #222222;
 }
+.yamm li {
+  width: 167.609px;
+  width: 16.7rem;
+}
 .yamm li ul.dropdown-menu {
-  min-width: 188.609px;
-  min-width: 18.8rem;
+  min-width: 167.609px;
+  min-width: 16.7rem;
 }
 .yamm li > a > .icon-wrapper {
   display: none;
@@ -19,11 +23,16 @@
   padding: 16px 0px 0px 0px;
   padding: 1.6rem 0 0 0;
 }
+.yamm li > a > .icon-wrapper .icon-bar {
+  height: 100%;
+  width: 100%;
+}
 .yamm li > a > h1 {
   display: inline;
   padding: 0;
   font-size: 15px;
   font-size: 0.9375em;
+  white-space: nowrap;
 }
 .yamm li > a:hover {
   color: #bdbdbd;
@@ -37,6 +46,7 @@
     padding: 41px 10px;
   }
 }
+/* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .enosis-paitent-menu {
     height: 95px;
@@ -47,22 +57,12 @@
     border-left: 1px solid #c1cadb;
   }
   .enosis-paitent-menu > li {
-    width: 118.609px;
-    width: 11.8rem;
+    width: 96.609px;
+    width: 9.6rem;
   }
   .enosis-paitent-menu > li ul.dropdown-menu {
-    min-width: 118.609px;
-    min-width: 11.8rem;
-  }
-  .enosis-paitent-menu > li ul.dropdown-menu:hover {
-    -webkit-transition: all 2s 'fade-in';
-    -moz-transition: all 2s 'fade-in';
-    -o-transition: all 2s 'fade-in';
-    transition: all 2s 'fade-in';
-    -webkit-transition: 2s 'fade-in';
-    -moz-transition: 2s 'fade-in';
-    -o-transition: 2s 'fade-in';
-    transition: 2s 'fade-in';
+    min-width: 96.609px;
+    min-width: 9.6rem;
   }
   .enosis-paitent-menu > li > a {
     text-align: center;
@@ -86,20 +86,38 @@
     background-position: center 32%;
     position: relative;
     -webkit-transition: .2s;
+    font-size: 10px;
+    font-size: 0.625em;
   }
 }
+/* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .enosis-paitent-menu {
-    height: 95px;
-    height: 9.5rem;
-  }
   .enosis-paitent-menu > li {
-    width: 188.609px;
-    width: 18.8rem;
+    width: 117.609px;
+    width: 11.7rem;
   }
   .enosis-paitent-menu > li ul.dropdown-menu {
-    min-width: 188.609px;
-    min-width: 18.8rem;
+    min-width: 117.609px;
+    min-width: 11.7rem;
+  }
+  .enosis-paitent-menu > li > a > h1 {
+    font-size: 12px;
+    font-size: 0.75em;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .enosis-paitent-menu > li {
+    width: 167.609px;
+    width: 16.7rem;
+  }
+  .enosis-paitent-menu > li ul.dropdown-menu {
+    min-width: 167.609px;
+    min-width: 16.7rem;
+  }
+  .enosis-paitent-menu > li > a > h1 {
+    font-size: 14px;
+    font-size: 0.875em;
   }
 }
 /*# sourceMappingURL=yamm-modify.css.map */
