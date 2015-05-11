@@ -28,6 +28,10 @@
 .yamm li > a:hover {
   color: #bdbdbd;
 }
+.yamm-fw .dropdown-menu {
+  margin: 0;
+  padding: 0;
+}
 @media (max-width: 768px) {
   .navbar-toggle {
     padding: 41px 10px;
@@ -38,7 +42,7 @@
     height: 95px;
     height: 9.5rem;
   }
-  .enosis-paitent-menu ul.sub-menu {
+  .enosis-paitent-menu .containing-sub-menu {
     background: #f7f8fb;
     border-left: 1px solid #c1cadb;
   }

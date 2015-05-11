@@ -43,13 +43,22 @@
     }
 }
 
+.yamm-fw .dropdown-menu {
+    margin: 0;
+    padding: 0;
+}
 
+.enosis-paitent-menu {
+    .enosis-header {
+    }
+}
 //at tablet
 @media(max-width:@screen-tablet) {
     .navbar-toggle {
         padding: 41px 10px;
     }
 }
+
 // before tablet
 @media (min-width:@screen-tablet) {
 
@@ -57,7 +66,7 @@
     .enosis-paitent-menu {
         .height(95px);
 
-        ul.sub-menu {
+        .containing-sub-menu {
             background: #f7f8fb;
             border-left: 1px solid #c1cadb;
         }
@@ -105,26 +114,27 @@
 // at desktop screen
 @media (min-width:@screen-md) {
 
+    // if inside desktop
 
     .enosis-paitent-menu {
         .height(95px);
-    }
-    // if inside desktop
-    .enosis-paitent-menu > li {
-        .width(@menu-top-item-width);
+
+        & > li {
+            .width(@menu-top-item-width);
 
 
-        ul.dropdown-menu {
-            .min-width(@menu-top-item-width);
-        }
-
-        & > a {
-
-
-            & > .icon-bar {
+            ul.dropdown-menu {
+                .min-width(@menu-top-item-width);
             }
 
-            & > h1 {
+            & > a {
+
+
+                & > .icon-bar {
+                }
+
+                & > h1 {
+                }
             }
         }
     }
