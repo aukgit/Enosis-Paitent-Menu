@@ -1,5 +1,6 @@
 ﻿@import "lesshat.less";
 @import "variables.less";
+@call-out-color: @primary-header-color;
 
 div.checkbox > label {
     padding-left: 0;
@@ -117,11 +118,11 @@ span.input-group-addon {
 
 input.form-control.datetime-input,
 input.form-control.date-input {
-    width: 256px;
+    .width(256px);
 }
 
 .btn-group.bootstrap-select.form-control {
-    width: 294px;
+    .width(294px);
 }
 
 button.btn.flag-combo.selectpicker {
@@ -222,10 +223,10 @@ p.create-btn-p,
     padding-bottom: 5px;
 }
 
-.modal-body [class|='col-md']:nth-child(2) {
+/*.modal-body [class|='col-md']:nth-child(2) {
     padding-left: 64px;
     padding-top: 7px;
-}
+}*/
 
 .uploader-progress-info {
     display: inline;
@@ -315,4 +316,20 @@ body div.container.body-content h1.gap-from-top-small > .glyphicon {
         content: "\e085";
     }
 }
+
+.bs-callout {
+  padding: 10px 20px 5px 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.bs-callout-info {
+  border-left-color: @call-out-color;
+}
+
+.bs-callout-info h4 {
+  color:  @call-out-color;
+}
+
 /*# sourceMappingURL=override-mvc-css.css.map */
